@@ -15,3 +15,10 @@ app.use(express.static('public'))
 app.use(expresLayouts)
 app.set('layout','./layouts/main')
 app.set('view engine','ejs')
+
+//Routes
+app.use('/', require('./server/routes/index'));
+
+app.listen(port,()=>{
+    console.log(`App is running at ${port}`)
+})
