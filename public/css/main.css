@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 800;
 }
 .container-fluid-custom{
-    max-width: 1600px;
+    max-width: 1200px;
 }
 .btn{
     padding-left: 1.6rem;
@@ -59,4 +59,7 @@ h1,h2,h3,h4,h5,h6{
     --bs-pagination-color:var(var(--bs-primary-rgb));
     --bs-pagination-active-bg:var(var(--bs-primary-rgb));
     --bs-pagination-active-border-color:var(var(--bs-primary-rgb));
+}
+.home{
+    
 }
