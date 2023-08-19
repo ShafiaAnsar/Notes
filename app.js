@@ -2,7 +2,10 @@ require ('dotenv').config()
 
 const express = require('express')
 const expresLayouts = require('express-ejs-layouts')
-
+const connectdb = require('./server/config/db')
+const session = require ('express-session')
+const passport = require ('passport')
+const MongoStore = require("connect-mongo")
 const app = express()
 const port = 5000 || process.env.port
 app.use(express.urlencoded({extended:true}))
@@ -10,7 +13,7 @@ app.use(express.json())
 
 //Static Files
 app.use(express.static('public'))
-
+connectdb()
 //Templating Engines
 app.use(expresLayouts)
 app.set('layout','./layouts/main')
