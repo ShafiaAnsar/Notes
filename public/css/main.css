@@ -67,7 +67,7 @@ h1,h2,h3,h4,h5,h6{
         url('../img/human-1.svg') left bottom no-repeat,
         url('../img/human-2.svg') right bottom no-repeat,
         url('../img/noise-bg.png') top repeat,
-        var(--background-color)
+        var(--background-color);
     } 
 }
 
