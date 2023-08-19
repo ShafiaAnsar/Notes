@@ -16,7 +16,7 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 800;
 }
 .container-fluid-custom{
-    max-width: 1200px;
+    max-width: 1600px;
 }
 .btn{
     padding-left: 1.6rem;
@@ -60,9 +60,17 @@ h1,h2,h3,h4,h5,h6{
     --bs-pagination-active-bg:var(var(--bs-primary-rgb));
     --bs-pagination-active-border-color:var(var(--bs-primary-rgb));
 }
-.home{
-
+/* Home */
+@media (min-width:1200px) {
+    .home{
+        background: 
+        url('../img/human-1.svg') left bottom no-repeat,
+        url('../img/human-2.svg') right bottom no-repeat,
+        url('../img/noise-bg.png') top repeat,
+        var(--background-color)
+    } 
 }
+
 .home-title::before{
     content:url('../img/stars.svg');
     position: absolute;
