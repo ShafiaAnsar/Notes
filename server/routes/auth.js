@@ -15,4 +15,19 @@ passport.use(new GoogleStrategy({
     });
   }
 ));
+
+router.get('/auth/google',
+  passport.authenticate('google', { scope: ['profile'] }));
+
+router.get('/google/callback', 
+  passport.authenticate('google', 
+  { failureRedirect: '/login-failure',
+  successRedirect :'/dashboard'
+}),
+);
+
+router.get('/login-failure',(req,res)=>{
+  res.send("Something went wrong...")
+})
+
 module.exports = router

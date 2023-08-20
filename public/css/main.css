@@ -81,7 +81,7 @@ h1,h2,h3,h4,h5,h6{
 .home-title::after{
     content:url('../img/stars.svg');
     position: absolute;
-    right: -50px;
+    right: -70px;
     bottom: -30px;
 
 }
