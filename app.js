@@ -12,9 +12,12 @@ const app = express()
 const port = 5000 || process.env.port
 
 app.use(session({
-    secret: 'your-secret-key',
+    secret: 'shafia',
     resave: false,
-    saveUninitialized: false
+    saveUninitialized: true,
+    store:MongoStore.create({
+        mongoUrl:process.env.MONGODB_URI
+    })
 }));
 
 app.use(passport.initialize())
