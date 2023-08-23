@@ -3,7 +3,9 @@ require ('dotenv').config()
 const express = require('express')
 const expresLayouts = require('express-ejs-layouts')
 const connectdb = require('./server/config/db')
+const methodOverRide = require('method-override')
 const session = require ('express-session')
+
 const passport = require ('passport')
 const MongoStore = require("connect-mongo")
 
@@ -26,7 +28,7 @@ app.use(passport.session())
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
-
+app.use(methodOverRide('_method'))
 //Static Files
 app.use(express.static('public'))
 connectdb()
