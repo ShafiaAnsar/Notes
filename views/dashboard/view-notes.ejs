@@ -10,9 +10,9 @@
         </nav>
         <div class="col d-flex justify-content-between align-items-center">
             <h1 class="h3">View Note</h1>
-            <button type="button" class="btn-danger btn me-2" data-bs-toggle="modal" id="deleteButton" data-bs-target="#deleteModal">
-                Delete
-            </button>
+            <form action="/dashboard/item-delete/<%= noteID %>?_method=DELETE" method="POST" class="position-relative">
+              <button type="submit" class="btn btn-danger me-2">Delete Note</button>
+            </form>
         </div>
       </div>
     </div>
@@ -35,21 +35,5 @@
   
   </div>
 
-<!-- Modal -->
-<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" >
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="deleteModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+
+</div> 
