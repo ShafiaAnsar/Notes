@@ -32,6 +32,7 @@ app.use(methodOverRide('_method'))
 //Static Files
 app.use(express.static('public'))
 // connectdb()
+
 //Templating Engines
 app.use(expresLayouts)
 app.set('layout','./layouts/main')
