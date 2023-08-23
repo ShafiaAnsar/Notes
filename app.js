@@ -31,7 +31,7 @@ app.use(express.json())
 app.use(methodOverRide('_method'))
 //Static Files
 app.use(express.static('public'))
-connectdb()
+// connectdb()
 //Templating Engines
 app.use(expresLayouts)
 app.set('layout','./layouts/main')
@@ -45,6 +45,8 @@ app.use('/', require('./server/routes/dashboard'));
 app.get('*', (req,res)=>{
     res.status(404).render("404")
 })
-app.listen(port,()=>{
-    console.log(`App is running at ${port}`)
+connectdb().then(()=>{
+    app.listen(port,()=>{
+        console.log(`App is running at ${port}`)
+    })
 })
