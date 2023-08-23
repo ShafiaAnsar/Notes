@@ -1,0 +1,32 @@
+<div class="container-fluid container-fluid-custom pb-5 mb-5">
+    <div class="row">
+        <% if (searchResults != '') { %>
+            <% searchResults.forEach(function(note, index) { %>
+                <div class="d-flex align-items-center justify-content-center mb-3 custom-note-div">
+                    <a href="/dashboard/item/<%= note._id %>">
+                        <h4><%= note.title %></h4>
+                    </a>
+                </div>
+            <% }); %>
+        <% } else { %>
+            <p>No items found.</p>
+        <% } %>
+    </div>
+</div>
+
+<style>
+    .custom-note-div {
+        max-width: 700px; /* Adjust this value as needed */
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #e9cfcf;
+    }
+    
+    .custom-note-div a {
+        text-decoration: none;
+        color: #333;
+    }
+</style>
