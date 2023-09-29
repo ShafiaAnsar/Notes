@@ -1,5 +1,4 @@
 require ('dotenv').config()
-
 const express = require('express')
 const expresLayouts = require('express-ejs-layouts')
 const connectdb = require('./server/config/db')
@@ -11,7 +10,7 @@ const MongoStore = require("connect-mongo")
 
 
 const app = express()
-const port = 3000 || process.env.port
+const port = 5000 || process.env.port
 
 app.use(session({
     secret: 'shafia',
